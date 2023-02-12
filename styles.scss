@@ -1,8 +1,11 @@
 // custom colors
 $primary-background: #fff;
-$primary-color: #000;
+$primary-color: #fff;
+$secondary-color: #000;
 $unselected: #b3b3b3;
+$unselected-border: #f0f0f0;
 $accent-color: #2daafc;
+$accent-text-color: #1970c3;
 
 html {
   body {
@@ -58,18 +61,104 @@ html {
         border-radius: 50%;
         border: none;
         background-color: $accent-color;
-        color: $primary-background;
+        color: $primary-color;
         font-size: 1.6rem;
       }
     }
   }
 
   .right-container {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 78%;
     background-image: url("./Images/CSS-Excercise.webp");
     background-repeat: no-repeat;
     background-size: cover;
+    color: $primary-color;
+
+    .header-nav {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      font-size: larger;
+
+      & > * {
+        margin-top: 3rem;
+      }
+
+      .links {
+        margin: 3rem auto 0 auto;
+        span {
+          margin: 0 1rem;
+        }
+      }
+
+      .flag {
+        display: flex;
+        align-items: center;
+        padding-right: 2rem;
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        svg {
+          font-size: medium;
+        }
+      }
+
+      .authorization {
+        padding-right: 2rem;
+
+        span {
+          margin: 0 1rem;
+        }
+
+        .sign-up {
+          background-color: $primary-background;
+          color: $accent-text-color;
+          font-weight: bold;
+          padding: 0.5rem;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    .wanderlust {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
+      margin-left: 25rem;
+
+      h1 {
+        font-size: 6em;
+        text-transform: uppercase;
+        margin: 0%;
+      }
+
+      h2 {
+        font-size: 3.4em;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.9em;
+        font-weight: 500;
+        margin-top: 1rem;
+      }
+    }
+
+    .help {
+      margin: auto 3rem 2.5rem auto;
+      height: 2.5rem;
+      width: 2.5rem;
+      color: $primary-color;
+      text-align: center;
+      font-size: 3rem;
+      border-radius: 50%;
+    }
   }
 
   .pop-up-container {
@@ -91,7 +180,7 @@ html {
 
       .selection-item {
         width: 25%;
-        border-bottom: 2px solid $unselected;
+        border-bottom: 2px solid $unselected-border;
         text-align: center;
         color: #b3b3b3;
         padding: 1.4rem;
@@ -125,7 +214,7 @@ html {
       }
 
       .pop-up-input {
-        border-bottom: 2px solid $unselected;
+        border-bottom: 2px solid $unselected-border;
 
         .input-heading {
           color: $unselected;
@@ -157,7 +246,7 @@ html {
         border: none;
         border-radius: 10px;
         background-color: $accent-color;
-        color: $primary-background;
+        color: $primary-color;
         font-size: 1.1rem;
         padding: 1.4rem;
         width: 80%;
